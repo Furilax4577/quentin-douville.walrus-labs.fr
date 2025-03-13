@@ -1,0 +1,21 @@
+:host {
+  display: flex;
+  .tags {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 10px;
+    column-gap: 10px;
+  }
+  .tag {
+    display: flex;
+    padding: 5px 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    user-select: none;
+  }
+}

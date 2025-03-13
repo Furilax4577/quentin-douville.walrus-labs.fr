@@ -1,0 +1,7 @@
+@use "../../../styles/variables" as *;
+
+:host {
+  h3 {
+    color: $secondary;
+  }
+}

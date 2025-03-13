@@ -1,0 +1,26 @@
+@use "../../../styles/variables.scss" as *;
+
+:host {
+  display: flex;
+  width: max-content;
+  position: relative;
+  // border: 1px solid red;
+  .num {
+    font-size: 128px;
+    opacity: 20%;
+    position: absolute;
+    padding-left: 28px;
+  }
+  .title {
+    text-transform: uppercase;
+    padding-top: 100px;
+    font-size: 40px;
+  }
+  .line {
+    top: 80px;
+    height: 2px;
+    width: 62px;
+    background-color: $white;
+    position: absolute;
+  }
+}

@@ -1,0 +1,52 @@
+@use "variables" as *;
+@use "fonts" as *;
+
+html,
+body {
+  background-color: #020a22;
+  padding: 0;
+  margin: 0;
+  color: $white;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+.button {
+  cursor: pointer;
+  border: none;
+  display: flex;
+  border-radius: 8px;
+  height: 42px;
+  padding: 0 24px;
+  justify-content: center;
+  align-items: center;
+  &.lined {
+    background: none;
+    border: 1px solid $blue;
+    color: $blue;
+  }
+  &.filled {
+    background: $blue;
+    color: $white;
+  }
+}

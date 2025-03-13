@@ -1,0 +1,11 @@
+<div class="tags" aria-label="Liste des compétences">
+  <div
+    class="tag"
+    matRipple
+    matRippleColor="white"
+    *ngFor="let competence of competences()"
+    [style.borderColor]="getTechColor(competence)"
+  >
+    {{ competence }}
+  </div>
+</div>

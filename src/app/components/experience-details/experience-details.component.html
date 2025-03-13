@@ -1,0 +1,14 @@
+<div class="experience">
+  <h3>
+    {{ experience()?.entreprise }} - {{ experience()?.poste }} -
+    {{ experience()?.lieu }} - {{ experience()?.typeContrat }} -
+    {{ experience()?.dateDebut | date : "MMMM yyyy" | titlecase }} -
+    {{ experience()?.dateFin | date : "MMMM yyyy" | titlecase }}
+  </h3>
+
+  <p>{{ experience()?.description }}</p>
+
+  <app-competence-tag-list
+    [competences]="experience()?.competences"
+  ></app-competence-tag-list>
+</div>
