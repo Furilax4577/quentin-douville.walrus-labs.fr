@@ -1,0 +1,21 @@
+<div class="list lato-black">
+  <ul>
+    <li
+      *ngFor="let group of groups | keyvalue"
+      [class.is-selected]="isSelected(group.key)"
+      (click)="selectGroup(group.key)"
+    >
+      {{ group.key }}
+    </li>
+  </ul>
+</div>
+<div class="groups">
+  <div class="group" *ngFor="let group of selectedGroup()">
+    <h5 class="lato-black">{{ group.category }}</h5>
+    <app-tags
+      [tags]="group.keywords"
+      bgColor="#182346"
+      textColor="white"
+    ></app-tags>
+  </div>
+</div>

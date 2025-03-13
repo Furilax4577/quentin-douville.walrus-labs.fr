@@ -13,6 +13,7 @@ export class GridElementComponent {
   @Input() horizontalAlign?: 'start' | 'center' | 'end';
   @Input() verticalAlign?: 'start' | 'center' | 'end';
   @Input() direction: 'column' | 'row' = 'row';
+  @Input() bgColor?: string;
 
   @HostBinding('style.grid-column')
   get gridColumn(): string {

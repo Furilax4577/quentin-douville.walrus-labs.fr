@@ -1,116 +1,220 @@
+<div class="header-background">
+  <div class="header-background-split">
+    <div class="walrus" style="background-image: url(images/w.svg)"></div>
+  </div>
+  <div class="gradient"></div>
+  <div class="header-background-split">
+    <div
+      class="photography"
+      style="background-image: url(images/quentin_douville.png)"
+    ></div>
+  </div>
+</div>
+
 <app-grid *ngIf="isGridVisible"></app-grid>
 
 <app-left-asside></app-left-asside>
 <app-right-asside></app-right-asside>
 
-<img class="w" src="images/w.svg" alt="Décoration arrière plan" />
-
 <main class="main">
-  <app-grid-element [startAt]="2" [col]="7"
-    ><section class="hero">
-      <img src="./images/small_quotes.svg" alt="Début de citation" />
-      <p class="fullName lato-regular">QUENTIN DOUVILLE</p>
-      <h2 class="lato-black">
-        DÉVELOPPEUR / LEAD TECH<br />FULL STACK JAVASCRIPT
-      </h2>
-      <div class="tags lato-bold">
-        <div class="tag">Angular</div>
-        <div class="tag">Node.JS</div>
-        <div class="tag">Javascript</div>
-        <div class="tag">TypeScript</div>
-      </div>
-      <p class="quotes lato-regular-italic">
-        "Le futur s’écrit une ligne de code à la fois."
-      </p>
-      <div class="buttons lato-bold">
-        <a class="button lined">Télécharger mon CV</a>
-        <a class="button filled">Travaillons ensemble</a>
-      </div>
-    </section></app-grid-element
-  >
+  <!-- Intro -->
+  <div class="line">
+    <div class="grid">
+      <app-grid-element [startAt]="2" [col]="7"
+        ><section class="introduction">
+          <img src="./images/small_quotes.svg" alt="Début de citation" />
+          <p class="fullName lato-regular">QUENTIN DOUVILLE</p>
+          <h2 class="lato-black">
+            DÉVELOPPEUR / LEAD TECH<br />FULL STACK JAVASCRIPT
+          </h2>
+          <app-tags [tags]="['Angular', 'Node.JS']"></app-tags>
+          <p class="quotes lato-regular-italic">
+            "Le futur s’écrit une ligne de code à la fois."
+          </p>
+          <div class="buttons lato-bold">
+            <a class="button lined">Télécharger mon CV</a>
+            <a class="button filled">Travaillons ensemble</a>
+          </div>
+        </section></app-grid-element
+      >
+    </div>
+  </div>
 
-  <app-grid-element [startAt]="3" [col]="5">
-    <section class="who">
-      <app-title title="Qui suis-je" [num]="1"></app-title>
-      <div class="fullName lato-black">
-        <img src="./images/small_quotes.svg" alt="" />Quentin Douville
-      </div>
-      <p class="lato-regular">
-        Développeur Fullstack JavaScript senior, spécialisé en Angular, Node.js
-        et microservices, avec une forte expertise en performance, scalabilité
-        et UX. J’ai dirigé des projets critiques dans des environnements
-        exigeants, optimisant les architectures pour garantir résilience et
-        efficacité. Mon approche repose sur l’automatisation, l’optimisation et
-        l’innovation technologique.
-      </p>
-    </section>
-  </app-grid-element>
+  <!-- Qui suis-je -->
+  <div class="line">
+    <div class="grid">
+      <app-grid-element [startAt]="3" [col]="5">
+        <section class="who">
+          <app-title title="Qui suis-je" [num]="1"></app-title>
+          <div class="fullName lato-black">
+            <img src="./images/small_quotes.svg" alt="" />Quentin Douville
+          </div>
+          <p class="lato-regular">
+            Développeur Fullstack JavaScript senior, spécialisé en Angular,
+            Node.js et microservices, avec une forte expertise en performance,
+            scalabilité et UX. J’ai dirigé des projets critiques dans des
+            environnements exigeants, optimisant les architectures pour garantir
+            résilience et efficacité. Mon approche repose sur l’automatisation,
+            l’optimisation et l’innovation technologique.
+          </p>
+        </section> </app-grid-element
+      ><app-grid-element
+        [startAt]="9"
+        [col]="3"
+        verticalAlign="end"
+        direction="column"
+      >
+        <section class="experience lato-black">
+          <div class="angle angle-left"></div>
+          <div class="exp exp-years">+10</div>
+          <div class="exp exp-text">
+            ans <br />d'experience <br />professionnelle
+          </div>
+          <div class="angle angle-right"></div>
+        </section>
+      </app-grid-element>
+    </div>
+  </div>
 
-  <app-grid-element
-    [startAt]="9"
-    [col]="3"
-    verticalAlign="end"
-    direction="column"
-  >
-    <section class="experience lato-black">
-      <div class="angle angle-left"></div>
-      <div class="exp exp-years">+10</div>
-      <div class="exp exp-text">
-        ans <br />d'experience <br />professionnelle
-      </div>
-      <div class="angle angle-right"></div>
-    </section>
-  </app-grid-element>
+  <!-- SOFT SKILLS & + -->
+  <div class="line">
+    <div class="grid">
+      <app-grid-element [col]="12">
+        <section class="soft-skills">
+          <h3 class="lato-black">SOFT SKILLS & +</h3>
+        </section></app-grid-element
+      >
+      <app-grid-element [col]="3"
+        ><app-soft-skill picto="group">
+          Communication <br />
+          & travail d’équipe</app-soft-skill
+        ></app-grid-element
+      >
+      <app-grid-element [col]="3" [startAt]="4"
+        ><app-soft-skill picto="ideas"
+          >Force de proposition<br />
+          & rigueur</app-soft-skill
+        ></app-grid-element
+      >
+      <app-grid-element [col]="3" [startAt]="7"
+        ><app-soft-skill picto="run"
+          >Autonomie <br />& prise d’initiative</app-soft-skill
+        ></app-grid-element
+      >
+      <app-grid-element [col]="3" [startAt]="10"
+        ><app-soft-skill picto="target"
+          >Priorisation<br />
+          & adaptabilité</app-soft-skill
+        ></app-grid-element
+      >
 
-  <app-grid-element [col]="12">
-    <section class="soft-skills">
-      <h3 class="lato-black">SOFT SKILLS & +</h3>
-    </section></app-grid-element
-  >
+      <!-- Autres -->
+      <app-grid-element [col]="4">
+        <app-point title="Centres d’intérêt" picto="star">
+          <ul>
+            <li>
+              <strong class="lato-black">Tech et veille :</strong> Développement
+              web, intelligence artificielle, cybersécurité, domotique,
+              écologie/indépendance énergétique.
+            </li>
+          </ul>
+        </app-point></app-grid-element
+      ><app-grid-element [col]="4" [startAt]="5"
+        ><app-point title="Langues" picto="langages">
+          <ul>
+            <li>
+              <strong class="lato-black">Français :</strong> Langue natale
+            </li>
+            <li>
+              <strong class="lato-black">Anglais :</strong> Niveau professionnel
+            </li>
+          </ul>
+        </app-point></app-grid-element
+      ><app-grid-element [col]="4" [startAt]="9">
+        <app-point title="Conférences et évènements" picto="events">
+          <ul>
+            <li>
+              <strong class="lato-black">2016 :</strong> Angular attack
+              (participant)
+            </li>
+            <li>
+              <strong class="lato-black">2017 :</strong> Angular attack
+              (participant)
+            </li>
+          </ul></app-point
+        ></app-grid-element
+      >
+    </div>
+  </div>
 
-  <app-grid-element [col]="3"
-    ><app-soft-skill picto="group">
-      Communication <br />
-      & travail d’équipe</app-soft-skill
-    ></app-grid-element
-  >
-  <app-grid-element [col]="3" [startAt]="4"
-    ><app-soft-skill picto="ideas"
-      >Force de proposition<br />
-      & rigueur</app-soft-skill
-    ></app-grid-element
-  >
-  <app-grid-element [col]="3" [startAt]="7"
-    ><app-soft-skill picto="run"
-      >Autonomie <br />& prise d’initiative</app-soft-skill
-    ></app-grid-element
-  >
-  <app-grid-element [col]="3" [startAt]="10"
-    ><app-soft-skill picto="target"
-      >Priorisation<br />
-      & adaptabilité</app-soft-skill
-    ></app-grid-element
-  >
+  <!-- Mes Compétences -->
+  <div class="line skills">
+    <div class="grid">
+      <app-grid-element [col]="10" [startAt]="2">
+        <app-title title="Mes Compétences" [num]="2"></app-title>
+      </app-grid-element>
+      <app-grid-element [col]="11" [startAt]="2"
+        ><app-skills></app-skills
+      ></app-grid-element>
+    </div>
+  </div>
+
+  <!-- ILS M’ONT FAIT CONFIANCE -->
+  <div class="line trust">
+    <div class="grid">
+      <app-grid-element [col]="12" bgColor="#04122D">
+        <h4 class="trusted">ILS M’ONT FAIT <br />CONFIANCE</h4>
+      </app-grid-element>
+      <app-grid-element [col]="2" [startAt]="2"
+        ><app-enterprise
+          imageAlt=""
+          imageName="logitud"
+        ></app-enterprise></app-grid-element
+      ><app-grid-element [col]="2" [startAt]="4"
+        ><app-enterprise
+          imageAlt=""
+          imageName="publicis"
+        ></app-enterprise></app-grid-element
+      ><app-grid-element [col]="2" [startAt]="6"
+        ><app-enterprise
+          imageAlt=""
+          imageName="mnt"
+        ></app-enterprise></app-grid-element
+      ><app-grid-element [col]="2" [startAt]="8"
+        ><app-enterprise
+          imageAlt=""
+          imageName="sarenza"
+        ></app-enterprise></app-grid-element
+      ><app-grid-element [col]="2" [startAt]="10"
+        ><app-enterprise imageAlt="" imageName="saint_gobain"></app-enterprise
+      ></app-grid-element>
+      <app-grid-element [col]="2" [startAt]="4"
+        ><app-enterprise imageAlt="" imageName="nanotera"></app-enterprise
+      ></app-grid-element>
+      <app-grid-element [col]="2" [startAt]="6"
+        ><app-enterprise imageAlt="" imageName="veloo"></app-enterprise
+      ></app-grid-element>
+      <app-grid-element [col]="2" [startAt]="8"
+        ><a href="" class="work-together lato-black"
+          >Travaillons<br />ensemble</a
+        ></app-grid-element
+      >
+    </div>
+  </div>
+
+  <!-- Mes projets -->
+  <div class="line projects">
+    <div class="grid">
+      <app-grid-element [col]="4" [startAt]="2">
+        <app-title
+          style="margin: 200px 0 80px"
+          title="Mes experiences"
+          [num]="3"
+        ></app-title>
+      </app-grid-element>
+      <app-grid-element [col]="12">
+        <app-experience></app-experience>
+      </app-grid-element>
+    </div>
+  </div>
 </main>
-
-<!-- <main>
-  
-
-
-  <div class="row"></div>
-
-  
-  <div class="row"></div>
-
-  <section>
-    <app-title title="Mes Compétences" [num]="2"></app-title>
-  </section>
-  <div class="row"></div>
-
-  <section>Ils m’ont fait confiance</section>
-  <div class="row"></div>
-
-  <section>
-    <app-title title="Mes projets" [num]="3"></app-title>
-  </section>
-</main> -->

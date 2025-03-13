@@ -1,0 +1,13 @@
+@use "../../../styles/variables.scss" as *;
+
+:host {
+  border-radius: 21px;
+  color: $black;
+  display: flex;
+  background: $white;
+  height: 42px;
+  padding: 0 24px;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+}
