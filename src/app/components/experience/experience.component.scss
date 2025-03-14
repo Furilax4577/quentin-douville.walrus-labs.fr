@@ -22,10 +22,6 @@
       }
       position: relative;
       grid-column: 1 / span 6;
-      img {
-        position: absolute;
-        top: 0;
-      }
     }
 
     .content {
@@ -43,6 +39,7 @@
       }
       ul {
         padding-right: 40px;
+        padding-left: 15px;
       }
       li {
         list-style: disc;
@@ -56,5 +53,9 @@
   .footer {
     height: 150px;
     background: #04122d;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 40px;
   }
 }
