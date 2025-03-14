@@ -1,0 +1,7 @@
+services:
+  walrus-labs:
+    build: .
+    container_name: angular-app
+    ports:
+      - "8081:8081" # Expose le port 8080
+    restart: always
