@@ -40,9 +40,7 @@ jobs:
 
       - name: 🚀 Déploiement rapide avec `rsync`
         run: |
-          rsync -avz --delete \
-            --exclude=node_modules \
-            ./dist/ ${{ secrets.VPS_USER }}@${{ secrets.VPS_IP }}:~/www/quentin-douville.walrus-labs.fr/
+          rsync -azP --delete --exclude=node_modules -e "ssh -i ~/.ssh/id_ed25519" ./ ${{ secrets.VPS_USER }}@${{ secrets.VPS_IP }}:~/www/quentin-douville.walrus-labs.fr
 
       - name: 🐳 Déployer le conteneur via Docker Compose
         run: |
