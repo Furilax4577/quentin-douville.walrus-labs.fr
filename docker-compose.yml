@@ -3,5 +3,5 @@ services:
     build: .
     container_name: quentin-douville.walrus-labs.fr
     ports:
-      - "8081:8080" # Expose le port 8080
+      - "8081:8081" # Expose le port 8081
     restart: always
