@@ -1,7 +1,9 @@
+version: "3.8"
+
 services:
   angular-app:
     build: .
     container_name: quentin-douville.walrus-labs.fr
     ports:
       - "8081:8081" # Expose le port 8081
-    restart: always
+    restart: unless-stopped
