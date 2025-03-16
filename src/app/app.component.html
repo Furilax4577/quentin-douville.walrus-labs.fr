@@ -1,107 +1,21 @@
-<!-- 
- <div class="header-background">
-  <div class="header-background-split">
-    
-  </div>
-  <div class="gradient"></div>
-  <div class="header-background-split">
-    <div
-      class="photography"
-      style="background-image: url(assets/images/quentin_douville.webp)"
-    ></div>
-  </div>
-</div>
-<app-grid *ngIf="isGridVisible"></app-grid>
--->
-
-<!-- <app-left-asside class="is-hidden-mobile"></app-left-asside> -->
-<!-- <app-right-asside class="is-hidden-mobile"></app-right-asside> -->
+<!-- Menus -->
 <app-burger-menu></app-burger-menu>
 
-<!-- <div class="fixed header-background">
-  <div class="splitted left">
-    <div class="walrus" style="background-image: url(assets/svg/w.svg)"></div>
-  </div>
-  <div class="splitted right"></div>
-</div> -->
-
 <div class="container">
+  <!-- Intro -->
   <app-main-line><app-introduction></app-introduction></app-main-line>
+  <!-- Qui suis-je -->
   <app-main-line><app-who-iam></app-who-iam></app-main-line>
+  <!-- SOFT SKILLS & + -->
   <app-main-line><app-soft-skills></app-soft-skills></app-main-line>
+  <!-- Centres d'interêts -->
   <app-main-line><app-interests></app-interests></app-main-line>
+  <!-- Ils m'on fait confiance -->
   <app-main-line [hasBackground]="true"
     ><app-they-trust-me></app-they-trust-me
   ></app-main-line>
+  <!-- Mes projets -->
   <app-main-line><app-studies></app-studies></app-main-line>
+  <!-- Contact -->
   <app-main-line><app-stay-in-touch></app-stay-in-touch></app-main-line>
-</div>
-
-<div class="fixed main" *ngIf="false">
-  <div class="centered">
-    <!-- Intro -->
-    <div class="line">
-      <div class="grid">
-        <app-grid-element [startAt]="2" [col]="10"></app-grid-element>
-      </div>
-    </div>
-
-    <!-- Qui suis-je -->
-    <div class="line" *ngIf="false">
-      <div class="grid">
-        <app-grid-element [startAt]="3" [col]="5"> </app-grid-element
-        ><app-grid-element
-          [startAt]="9"
-          [col]="3"
-          verticalAlign="end"
-          direction="column"
-        >
-        </app-grid-element>
-      </div>
-    </div>
-
-    <!-- SOFT SKILLS & + -->
-    <div class="line" *ngIf="false">
-      <div class="grid">
-        <app-grid-element [col]="12">
-          <section class="soft-skills"></section
-        ></app-grid-element>
-        <app-grid-element [col]="3"></app-grid-element>
-        <app-grid-element [col]="3" [startAt]="4"></app-grid-element>
-        <app-grid-element [col]="3" [startAt]="7"></app-grid-element>
-        <app-grid-element [col]="3" [startAt]="10"></app-grid-element>
-        <app-grid-element [col]="4"> </app-grid-element
-        ><app-grid-element [col]="4" [startAt]="5"></app-grid-element
-        ><app-grid-element [col]="4" [startAt]="9"> </app-grid-element>
-      </div>
-    </div>
-
-    <!-- Mes Compétences -->
-    <div class="line skills" *ngIf="false">
-      <div class="grid">
-        <app-grid-element [col]="10" [startAt]="2">
-          <app-title title="Mes Compétences" [num]="2"></app-title>
-        </app-grid-element>
-        <app-grid-element [col]="11" [startAt]="2"
-          ><app-skills></app-skills
-        ></app-grid-element>
-      </div>
-    </div>
-
-    <!-- Mes projets -->
-    <div class="line projects" *ngIf="false">
-      <div class="grid">
-        <app-grid-element [col]="4" [startAt]="2">
-          <app-title
-            style="margin: 200px 0 80px"
-            title="Mes experiences"
-            [num]="3"
-          ></app-title>
-        </app-grid-element>
-        <app-grid-element [col]="12">
-          <app-experience></app-experience>
-        </app-grid-element>
-      </div>
-    </div>
-  </div>
 </div>
