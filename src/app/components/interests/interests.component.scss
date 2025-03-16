@@ -1,8 +1,10 @@
+@use "../../../styles/variables.scss" as *;
+
 :host {
   .interests {
-    margin-top: 30px;
+    margin-top: $padding;
     display: flex;
-    gap: 30px;
+    gap: $padding;
   }
 }
 
@@ -10,7 +12,7 @@
   :host {
     .interests {
       flex-direction: column;
-      row-gap: 30px;
+      row-gap: $padding;
     }
   }
 }

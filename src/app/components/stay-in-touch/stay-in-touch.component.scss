@@ -1,0 +1,43 @@
+@use "../../../styles/variables.scss" as *;
+
+:host {
+  .stay-in-touch {
+    background-color: $dark-blue;
+    display: flex;
+  }
+  .image {
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  ul {
+    border-bottom: 1px solid rgba($color: $white, $alpha: 0.1);
+    padding-bottom: $padding;
+    margin-bottom: $padding;
+    li + li {
+      margin-top: 15px;
+    }
+  }
+  .center {
+    max-width: max-content;
+    padding: $padding;
+  }
+  p {
+    font-size: 32px;
+    padding-bottom: $padding;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  :host {
+  }
+}

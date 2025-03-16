@@ -26,15 +26,15 @@
 </div> -->
 
 <div class="container">
-  <div class="main">
-    <app-introduction></app-introduction>
-    <app-who-iam></app-who-iam>
-    <app-soft-skills></app-soft-skills>
-    <app-interests></app-interests>
-    <app-they-trust-me></app-they-trust-me>
-    <app-studies></app-studies>
-    <app-stay-in-touch></app-stay-in-touch>
-  </div>
+  <app-main-line><app-introduction></app-introduction></app-main-line>
+  <app-main-line><app-who-iam></app-who-iam></app-main-line>
+  <app-main-line><app-soft-skills></app-soft-skills></app-main-line>
+  <app-main-line><app-interests></app-interests></app-main-line>
+  <app-main-line [hasBackground]="true"
+    ><app-they-trust-me></app-they-trust-me
+  ></app-main-line>
+  <app-main-line><app-studies></app-studies></app-main-line>
+  <app-main-line><app-stay-in-touch></app-stay-in-touch></app-main-line>
 </div>
 
 <div class="fixed main" *ngIf="false">
@@ -85,49 +85,6 @@
         <app-grid-element [col]="11" [startAt]="2"
           ><app-skills></app-skills
         ></app-grid-element>
-      </div>
-    </div>
-
-    <!-- ILS M’ONT FAIT CONFIANCE -->
-    <div class="line trust" *ngIf="false">
-      <div class="grid">
-        <app-grid-element [col]="12" bgColor="#04122D">
-          <h4 class="trusted">ILS M’ONT FAIT <br />CONFIANCE</h4>
-        </app-grid-element>
-        <app-grid-element [col]="2" [startAt]="2"
-          ><app-enterprise
-            imageAlt=""
-            imageName="logitud"
-          ></app-enterprise></app-grid-element
-        ><app-grid-element [col]="2" [startAt]="4"
-          ><app-enterprise
-            imageAlt=""
-            imageName="publicis"
-          ></app-enterprise></app-grid-element
-        ><app-grid-element [col]="2" [startAt]="6"
-          ><app-enterprise
-            imageAlt=""
-            imageName="mnt"
-          ></app-enterprise></app-grid-element
-        ><app-grid-element [col]="2" [startAt]="8"
-          ><app-enterprise
-            imageAlt=""
-            imageName="sarenza"
-          ></app-enterprise></app-grid-element
-        ><app-grid-element [col]="2" [startAt]="10"
-          ><app-enterprise imageAlt="" imageName="saint_gobain"></app-enterprise
-        ></app-grid-element>
-        <app-grid-element [col]="2" [startAt]="4"
-          ><app-enterprise imageAlt="" imageName="nanotera"></app-enterprise
-        ></app-grid-element>
-        <app-grid-element [col]="2" [startAt]="6"
-          ><app-enterprise imageAlt="" imageName="veloo"></app-enterprise
-        ></app-grid-element>
-        <app-grid-element [col]="2" [startAt]="8"
-          ><a href="" class="work-together lato-black"
-            >Travaillons<br />ensemble</a
-          ></app-grid-element
-        >
       </div>
     </div>
 

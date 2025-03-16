@@ -1,0 +1,58 @@
+@use "../../../styles/variables.scss" as *;
+
+:host {
+  .formations {
+    display: flex;
+    gap: $padding;
+  }
+  section {
+    width: 33%;
+    border: 1px solid $dark-blue;
+  }
+
+  .header {
+    display: flex;
+    font-size: 24px;
+  }
+  .start-to-end {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $dark-blue;
+  }
+  .header-content {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: end;
+    padding-left: $padding;
+    text-transform: uppercase;
+  }
+  .sup-title {
+    opacity: 0.5;
+    font-size: 16px;
+  }
+  .title {
+    font-size: 32px;
+  }
+  .content {
+    padding: $padding;
+  }
+  .footer {
+    padding: 0 $padding $padding $padding;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  :host {
+    .formations {
+      flex-direction: column;
+      row-gap: $padding;
+    }
+    section {
+      width: 100%;
+    }
+  }
+}

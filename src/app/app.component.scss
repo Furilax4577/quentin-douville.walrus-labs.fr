@@ -1,14 +1,8 @@
-// @use "../styles/variables.scss" as *;
+@use "../styles/variables.scss" as *;
 
 :host {
   .container {
     padding-top: 0;
-  }
-
-  .main {
-    padding: 30px;
-    padding-right: 150px;
-    padding-left: 150px;
   }
 }
 
@@ -17,9 +11,6 @@
     .container {
       overflow-x: hidden;
       padding-top: 80px;
-    }
-    .main {
-      padding: 0 30px 30px 30px;
     }
   }
 }
@@ -137,29 +128,6 @@
 //   column-gap: 40px;
 //   grid-template-columns: repeat(12, 1fr);
 //   margin: 0 auto;
-// }
-
-// .trust {
-//   padding: 150px 0;
-//   background-color: #04122d;
-//   .grid {
-//     gap: 40px;
-//   }
-// }
-
-// .trusted {
-//   font-size: 128px;
-//   opacity: 0.2;
-//   text-align: center;
-//   width: 100%;
-// }
-
-// .work-together {
-//   display: flex;
-//   background: #019afe;
-//   width: 100%;
-//   justify-content: center;
-//   align-items: center;
 // }
 
 // .skills {

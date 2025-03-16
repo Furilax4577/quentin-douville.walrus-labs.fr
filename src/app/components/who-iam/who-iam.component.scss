@@ -1,6 +1,7 @@
+@use "../../../styles/variables.scss" as *;
+
 :host {
   .who-iam {
-    border: 1px solid red;
     margin-top: 220px;
     app-title {
       margin-bottom: 70px;
@@ -17,7 +18,6 @@
   }
 
   .experience {
-    border: 1px solid red;
     position: relative;
     height: 100px;
     display: flex;
@@ -66,12 +66,9 @@
 @media only screen and (max-width: 640px) {
   :host {
     .who-iam {
-      border: 1px solid green;
-
-      margin-top: 30px;
+      margin-top: $padding;
     }
     .experience {
-      border: 1px solid green;
     }
   }
 }

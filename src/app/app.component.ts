@@ -3,7 +3,6 @@ import { TitleComponent } from './components/title/title.component';
 import { CommonModule } from '@angular/common';
 import { isDevMode } from '@angular/core';
 import { GridElementComponent } from './components/grid-element/grid-element.component';
-import { EnterpriseComponent } from './components/enterprise/enterprise.component';
 import { SkillsComponent } from './components/skills/skills.component';
 import { ExperienceComponent } from './components/experience/experience.component';
 import { BurgerMenuComponent } from './components/burger-menu/burger-menu.component';
@@ -14,6 +13,7 @@ import { InterestsComponent } from './components/interests/interests.component';
 import { StudiesComponent } from './components/studies/studies.component';
 import { TheyTrustMeComponent } from './components/they-trust-me/they-trust-me.component';
 import { StayInTouchComponent } from './components/stay-in-touch/stay-in-touch.component';
+import { MainLineComponent } from './components/main-line/main-line.component';
 
 @Component({
   selector: 'app-root',
@@ -22,7 +22,6 @@ import { StayInTouchComponent } from './components/stay-in-touch/stay-in-touch.c
     CommonModule,
     GridElementComponent,
     InterestsComponent,
-    EnterpriseComponent,
     SkillsComponent,
     ExperienceComponent,
     BurgerMenuComponent,
@@ -33,6 +32,7 @@ import { StayInTouchComponent } from './components/stay-in-touch/stay-in-touch.c
     StudiesComponent,
     TheyTrustMeComponent,
     StayInTouchComponent,
+    MainLineComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',

@@ -1,0 +1,21 @@
+@use "../../../styles/variables.scss" as *;
+
+:host {
+  &.has-background {
+    background: $lighter-background;
+  }
+  display: flex;
+  .main {
+    padding: $padding;
+    padding-right: 150px;
+    padding-left: 150px;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  :host {
+    .main {
+      padding: 0 $padding $padding $padding;
+    }
+  }
+}

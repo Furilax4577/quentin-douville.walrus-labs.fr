@@ -1,3 +1,5 @@
+@use "../../../styles/variables.scss" as *;
+
 :host {
   margin-top: 220px;
 
@@ -7,7 +9,7 @@
   }
   .soft-skills {
     display: flex;
-    gap: 30px;
+    gap: $padding;
   }
 }
 
@@ -18,7 +20,7 @@
     }
     .soft-skills {
       flex-direction: column;
-      row-gap: 30px;
+      row-gap: $padding;
     }
   }
 }
