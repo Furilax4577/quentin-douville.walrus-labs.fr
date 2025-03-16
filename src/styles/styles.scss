@@ -5,28 +5,27 @@
 
 html,
 body {
-  background-color: #020a22;
+  background-color: $background;
   color: $white;
 }
 
-// .button {
-//   cursor: pointer;
-//   border: none;
-//   display: flex;
-//   border-radius: 8px;
-//   font-size: 16px;
-//   font-size: 0.85vw;
-//   height: 42px;
-//   padding: 0 24px;
-//   justify-content: center;
-//   align-items: center;
-//   &.lined {
-//     background: none;
-//     border: 1px solid $blue;
-//     color: $blue;
-//   }
-//   &.filled {
-//     background: $blue;
-//     color: $white;
-//   }
-// }
+.button {
+  cursor: pointer;
+  border: none;
+  display: flex;
+  border-radius: 8px;
+  font-size: 16px;
+  height: 42px;
+  padding: 0 24px;
+  justify-content: center;
+  align-items: center;
+  &.lined {
+    background: none;
+    border: 1px solid $blue;
+    color: $blue;
+  }
+  &.filled {
+    background: $blue;
+    color: $white;
+  }
+}

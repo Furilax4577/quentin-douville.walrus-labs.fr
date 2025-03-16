@@ -1,0 +1,16 @@
+:host {
+  .interests {
+    margin-top: 30px;
+    display: flex;
+    gap: 30px;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  :host {
+    .interests {
+      flex-direction: column;
+      row-gap: 30px;
+    }
+  }
+}

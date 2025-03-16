@@ -7,7 +7,7 @@ import { Component, HostBinding } from '@angular/core';
   styleUrl: './burger-menu.component.scss',
 })
 export class BurgerMenuComponent {
-  @HostBinding('class.active') isActive = true;
+  @HostBinding('class.active') isActive = false;
 
   toggleActive() {
     this.isActive = !this.isActive;

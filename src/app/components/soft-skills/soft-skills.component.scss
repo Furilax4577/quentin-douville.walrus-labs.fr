@@ -1,0 +1,24 @@
+:host {
+  margin-top: 220px;
+
+  h3 {
+    font-size: 128px;
+    opacity: 0.2;
+  }
+  .soft-skills {
+    display: flex;
+    gap: 30px;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  :host {
+    h3 {
+      font-size: 48px;
+    }
+    .soft-skills {
+      flex-direction: column;
+      row-gap: 30px;
+    }
+  }
+}

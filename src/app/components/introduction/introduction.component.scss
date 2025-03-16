@@ -1,0 +1,40 @@
+:host {
+  section {
+    margin-top: 340px;
+    position: relative;
+  }
+  img {
+    position: absolute;
+    left: -40px;
+    top: 10px;
+    width: 65px;
+    z-index: 1;
+  }
+  h1 {
+    margin-left: -3px;
+    z-index: 2;
+    position: relative;
+  }
+  .full-name {
+    margin-right: 15px;
+    font-size: 20px;
+    color: #b5aeb7;
+    text-align: right;
+  }
+  .quotes {
+    font-size: 36px;
+  }
+  .buttons {
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  :host {
+    section {
+      margin-top: 0;
+    }
+  }
+}

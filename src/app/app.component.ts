@@ -3,13 +3,14 @@ import { TitleComponent } from './components/title/title.component';
 import { CommonModule } from '@angular/common';
 import { isDevMode } from '@angular/core';
 import { GridElementComponent } from './components/grid-element/grid-element.component';
-import { SoftSkillComponent } from './components/soft-skill/soft-skill.component';
-import { PointComponent } from './components/point/point.component';
 import { EnterpriseComponent } from './components/enterprise/enterprise.component';
 import { SkillsComponent } from './components/skills/skills.component';
-import { TagsComponent } from './components/tags/tags.component';
 import { ExperienceComponent } from './components/experience/experience.component';
 import { BurgerMenuComponent } from './components/burger-menu/burger-menu.component';
+import { IntroductionComponent } from './components/introduction/introduction.component';
+import { WhoIAmComponent } from './components/who-iam/who-iam.component';
+import { SoftSkillsComponent } from './components/soft-skills/soft-skills.component';
+import { InterestsComponent } from './components/interests/interests.component';
 
 @Component({
   selector: 'app-root',
@@ -17,13 +18,15 @@ import { BurgerMenuComponent } from './components/burger-menu/burger-menu.compon
     TitleComponent,
     CommonModule,
     GridElementComponent,
-    SoftSkillComponent,
-    PointComponent,
+    InterestsComponent,
     EnterpriseComponent,
     SkillsComponent,
-    TagsComponent,
     ExperienceComponent,
     BurgerMenuComponent,
+    IntroductionComponent,
+    WhoIAmComponent,
+    SoftSkillsComponent,
+    InterestsComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',

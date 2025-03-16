@@ -1,12 +1,12 @@
 import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-point',
+  selector: 'app-interest',
   imports: [],
-  templateUrl: './point.component.html',
-  styleUrl: './point.component.scss',
+  templateUrl: './interest.component.html',
+  styleUrl: './interest.component.scss',
 })
-export class PointComponent {
+export class InterestComponent {
   @Input({ required: true }) title!: string;
   @Input({ required: true }) picto!: string;
 }
