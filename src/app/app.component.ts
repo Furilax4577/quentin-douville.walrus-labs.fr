@@ -11,6 +11,9 @@ import { IntroductionComponent } from './components/introduction/introduction.co
 import { WhoIAmComponent } from './components/who-iam/who-iam.component';
 import { SoftSkillsComponent } from './components/soft-skills/soft-skills.component';
 import { InterestsComponent } from './components/interests/interests.component';
+import { StudiesComponent } from './components/studies/studies.component';
+import { TheyTrustMeComponent } from './components/they-trust-me/they-trust-me.component';
+import { StayInTouchComponent } from './components/stay-in-touch/stay-in-touch.component';
 
 @Component({
   selector: 'app-root',
@@ -27,6 +30,9 @@ import { InterestsComponent } from './components/interests/interests.component';
     WhoIAmComponent,
     SoftSkillsComponent,
     InterestsComponent,
+    StudiesComponent,
+    TheyTrustMeComponent,
+    StayInTouchComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
