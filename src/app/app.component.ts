@@ -1,10 +1,6 @@
 import { Component, HostListener } from '@angular/core';
-import { TitleComponent } from './components/title/title.component';
 import { CommonModule } from '@angular/common';
 import { isDevMode } from '@angular/core';
-import { GridElementComponent } from './components/grid-element/grid-element.component';
-import { SkillsComponent } from './components/skills/skills.component';
-import { ExperienceComponent } from './components/experience/experience.component';
 import { BurgerMenuComponent } from './components/burger-menu/burger-menu.component';
 import { IntroductionComponent } from './components/introduction/introduction.component';
 import { WhoIAmComponent } from './components/who-iam/who-iam.component';
@@ -18,12 +14,8 @@ import { MainLineComponent } from './components/main-line/main-line.component';
 @Component({
   selector: 'app-root',
   imports: [
-    TitleComponent,
     CommonModule,
-    GridElementComponent,
     InterestsComponent,
-    SkillsComponent,
-    ExperienceComponent,
     BurgerMenuComponent,
     IntroductionComponent,
     WhoIAmComponent,
