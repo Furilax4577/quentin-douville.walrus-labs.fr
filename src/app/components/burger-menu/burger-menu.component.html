@@ -5,29 +5,33 @@
   <img
     [src]="getImagePath()"
     alt="Contacter par téléphone"
-    class="burger-toggle is-mobile-only"
+    class="burger-toggle burger-open"
     (click)="toggleActive()"
   />
 </div>
 
 <nav class="lato-black">
-  <h1>
-    <a href="/"
-      ><img src="./assets/svg/walrus-labs.svg" alt="Logo de Walrus Labs"
-    /></a>
-  </h1>
-  <ul>
+  <img
+    [src]="getImagePath()"
+    alt="Contacter par téléphone"
+    class="burger-toggle burger-close"
+    (click)="toggleActive()"
+  />
+  <a href="/" class="home-link"
+    ><img src="./assets/svg/walrus-labs.svg" alt="Logo de Walrus Labs"
+  /></a>
+  <ul class="pages">
     <li><a href="">A propos.</a></li>
     <li><a href="">Compétences.</a></li>
     <li><a href="">Expérience.</a></li>
     <li><a href="">Formation.</a></li>
     <li><a href="">Contact.</a></li>
   </ul>
-  <div class="telephone">
+  <div class="phone">
     <img src="./assets/svg/telephone.svg" alt="Contacter par téléphone" />
     <a href="tel:+33669517395">06 69 51 73 95</a>
   </div>
-  <ul>
+  <ul class="links">
     <li>
       <a href="" target="_blank"
         ><img src="./assets/svg/mail.svg" alt="Contacter par email"
