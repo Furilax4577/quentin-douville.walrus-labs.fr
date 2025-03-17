@@ -8,18 +8,36 @@
 <div class="container">
   <!-- Intro -->
   <app-main-line><app-introduction></app-introduction></app-main-line>
-  <!-- Qui suis-je -->
+
+  <!-- 1. Qui suis-je -->
   <app-main-line><app-who-iam></app-who-iam></app-main-line>
+
   <!-- SOFT SKILLS & + -->
   <app-main-line><app-soft-skills></app-soft-skills></app-main-line>
   <!-- Centres d'interêts -->
   <app-main-line><app-interests></app-interests></app-main-line>
+
+  <!-- 2. Mes compétences -->
+  <app-main-line
+    ><app-title title="Mes compétences" [num]="2"></app-title>
+  </app-main-line>
+
   <!-- Ils m'on fait confiance -->
   <app-main-line [hasBackground]="true"
     ><app-they-trust-me></app-they-trust-me
   ></app-main-line>
-  <!-- Mes projets -->
+
+  <!-- 3. Mes expériences -->
+  <app-main-line>
+    <app-title title="Mes expériences" [num]="3"></app-title>
+  </app-main-line>
+
+  <!-- Un projet à développer ? -->
+  <app-main-line><app-new-project></app-new-project></app-main-line>
+
+  <!-- 4. Ma formation -->
   <app-main-line><app-studies></app-studies></app-main-line>
-  <!-- Contact -->
+
+  <!-- 5. Prenons contact -->
   <app-main-line><app-stay-in-touch></app-stay-in-touch></app-main-line>
 </div>

@@ -12,6 +12,8 @@ import { StayInTouchComponent } from './components/stay-in-touch/stay-in-touch.c
 import { MainLineComponent } from './components/main-line/main-line.component';
 import { LeftMenuComponent } from './components/left-menu/left-menu.component';
 import { RightMenuComponent } from './components/right-menu/right-menu.component';
+import { TitleComponent } from './components/title/title.component';
+import { NewProjectComponent } from './components/new-project/new-project.component';
 
 @Component({
   selector: 'app-root',
@@ -29,6 +31,8 @@ import { RightMenuComponent } from './components/right-menu/right-menu.component
     MainLineComponent,
     LeftMenuComponent,
     RightMenuComponent,
+    TitleComponent,
+    NewProjectComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
