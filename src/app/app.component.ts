@@ -10,6 +10,8 @@ import { StudiesComponent } from './components/studies/studies.component';
 import { TheyTrustMeComponent } from './components/they-trust-me/they-trust-me.component';
 import { StayInTouchComponent } from './components/stay-in-touch/stay-in-touch.component';
 import { MainLineComponent } from './components/main-line/main-line.component';
+import { LeftMenuComponent } from './components/left-menu/left-menu.component';
+import { RightMenuComponent } from './components/right-menu/right-menu.component';
 
 @Component({
   selector: 'app-root',
@@ -25,6 +27,8 @@ import { MainLineComponent } from './components/main-line/main-line.component';
     TheyTrustMeComponent,
     StayInTouchComponent,
     MainLineComponent,
+    LeftMenuComponent,
+    RightMenuComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',

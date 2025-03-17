@@ -1,51 +1,52 @@
-<img
-  [src]="getImagePath()"
-  alt="Contacter par téléphone"
-  class="burger-toggle is-mobile-only"
-  (click)="toggleActive()"
-/>
+<div class="header">
+  <a href="/"
+    ><img src="./assets/svg/walrus-labs.svg" alt="Logo de Walrus Labs"
+  /></a>
+  <img
+    [src]="getImagePath()"
+    alt="Contacter par téléphone"
+    class="burger-toggle is-mobile-only"
+    (click)="toggleActive()"
+  />
+</div>
 
 <nav class="lato-black">
-  <div class="left-side">
-    <h1>
-      <a href="/"
-        ><img src="./assets/svg/walrus-labs.svg" alt="Logo de Walrus Labs"
+  <h1>
+    <a href="/"
+      ><img src="./assets/svg/walrus-labs.svg" alt="Logo de Walrus Labs"
+    /></a>
+  </h1>
+  <ul>
+    <li><a href="">A propos.</a></li>
+    <li><a href="">Compétences.</a></li>
+    <li><a href="">Expérience.</a></li>
+    <li><a href="">Formation.</a></li>
+    <li><a href="">Contact.</a></li>
+  </ul>
+  <div class="telephone">
+    <img src="./assets/svg/telephone.svg" alt="Contacter par téléphone" />
+    <a href="tel:+33669517395">06 69 51 73 95</a>
+  </div>
+  <ul>
+    <li>
+      <a href="" target="_blank"
+        ><img src="./assets/svg/mail.svg" alt="Contacter par email"
       /></a>
-    </h1>
-    <ul>
-      <li><a href="">A propos.</a></li>
-      <li><a href="">Compétences.</a></li>
-      <li><a href="">Expérience.</a></li>
-      <li><a href="">Formation.</a></li>
-      <li><a href="">Contact.</a></li>
-    </ul>
-  </div>
-  <div class="right-side">
-    <div class="telephone">
-      <img src="./assets/svg/telephone.svg" alt="Contacter par téléphone" />
-      <a href="tel:+33669517395">06 69 51 73 95</a>
-    </div>
-    <ul>
-      <li>
-        <a href="" target="_blank"
-          ><img src="./assets/svg/mail.svg" alt="Contacter par email"
-        /></a>
-      </li>
-      <li>
-        <a href="" target="_blank"
-          ><img src="./assets/svg/gitlab.svg" alt="Voir mon gitlab"
-        /></a>
-      </li>
-      <li>
-        <a href="" target="_blank"
-          ><img src="./assets/svg/linkedin.svg" alt="Voir mon profil linkedIn"
-        /></a>
-      </li>
-      <li>
-        <a href="" target="_blank"
-          ><img src="./assets/svg/github.svg" alt="Voir mon github"
-        /></a>
-      </li>
-    </ul>
-  </div>
+    </li>
+    <li>
+      <a href="" target="_blank"
+        ><img src="./assets/svg/gitlab.svg" alt="Voir mon gitlab"
+      /></a>
+    </li>
+    <li>
+      <a href="" target="_blank"
+        ><img src="./assets/svg/linkedin.svg" alt="Voir mon profil linkedIn"
+      /></a>
+    </li>
+    <li>
+      <a href="" target="_blank"
+        ><img src="./assets/svg/github.svg" alt="Voir mon github"
+      /></a>
+    </li>
+  </ul>
 </nav>

@@ -3,9 +3,12 @@
 @use "fonts" as *;
 @use "responsive" as *;
 
+html {
+  background-color: $background;
+}
+
 html,
 body {
-  background-color: $background;
   color: $white;
 }
 
