@@ -1,13 +1,15 @@
 @use "../../../styles/variables.scss" as *;
 
 :host {
-  display: flex;
-  flex-direction: column;
-  width: 45px;
-  position: fixed;
-  right: 45px;
-  top: 45px;
-  z-index: 200;
+  .infos {
+    display: flex;
+    flex-direction: column;
+    width: 45px;
+    position: fixed;
+    right: 45px;
+    top: 45px;
+    z-index: 200;
+  }
 
   img {
     width: 18px;
@@ -41,6 +43,18 @@
       display: flex;
       flex-wrap: wrap;
       line-height: 20px;
+    }
+  }
+
+  .scroll-top {
+    position: fixed;
+    bottom: 65px;
+    right: 65px;
+    z-index: 1000;
+    cursor: pointer;
+    img {
+      width: 32px;
+      height: 32px;
     }
   }
 }

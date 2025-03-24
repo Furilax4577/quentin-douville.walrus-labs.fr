@@ -1,12 +1,14 @@
 @use "../../../styles/variables.scss" as *;
 
 :host {
-  flex-direction: column;
-  width: auto;
-  position: fixed;
-  left: 45px;
-  top: 45px;
-  z-index: 200;
+  nav {
+    flex-direction: column;
+    width: auto;
+    position: fixed;
+    left: 45px;
+    top: 45px;
+    z-index: 200;
+  }
 
   a {
     display: flex;
@@ -16,14 +18,34 @@
     margin-top: 50px;
     flex-direction: column;
   }
+
   li {
     display: flex;
     &:hover {
       color: white;
     }
   }
+
   li + li {
     margin-top: $padding;
+  }
+
+  .scroll {
+    position: fixed;
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-size: 14px;
+    transform: rotate(-90deg);
+    bottom: 100px;
+    span {
+      margin-right: 10px;
+      display: flex;
+      width: 80px;
+      height: 2px;
+      background: linear-gradient(90deg, rgba($white, 0) 0%, $white 100%);
+    }
   }
 }
 
