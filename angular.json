@@ -29,7 +29,10 @@
                 "input": "public"
               }
             ],
-            "styles": ["src/styles/styles.scss", "src/styles/variables.scss"],
+            "styles": [
+              "node_modules/bulma/css/bulma.min.css",
+              "src/styles/styles.scss"
+            ],
             "scripts": [],
             "server": "src/main.server.ts",
             "prerender": true,

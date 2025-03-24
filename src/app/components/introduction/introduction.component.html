@@ -1,17 +1,28 @@
-<section>
-  <img src="./assets/svg/small_quotes.svg" alt="Début de citation" />
-  <p class="full-name lato-regular">QUENTIN DOUVILLE</p>
-  <h1 class="lato-black title-2">
-    DÉVELOPPEUR / LEAD TECH<br />FULL STACK JAVASCRIPT
-  </h1>
-  <app-tags [tags]="['Angular', 'Node.JS']"></app-tags>
-  <p class="quotes lato-regular-italic">
-    "Le futur s’écrit une ligne de code à la fois."
-  </p>
-  <div class="buttons lato-bold">
-    <a href="./assets/pdf/CV-quentin-douville.pdf" download class="button lined"
-      >Télécharger mon CV</a
+<div class="fixed-grid has-12-cols has-6-cols-mobile">
+  <div class="grid is-gap-4 is-row-gap-4">
+    <section
+      class="cell is-col-span-6 is-col-start-2 is-col-span-6-mobile is-col-start-1-mobile"
     >
-    <a class="button filled">Travaillons ensemble</a>
+      <img src="./assets/svg/small_quotes.svg" alt="Début de citation" />
+      <p class="full-name lato-regular">QUENTIN DOUVILLE</p>
+      <h1 class="lato-black title-2">
+        DÉVELOPPEUR / LEAD TECH<br />FULL STACK JAVASCRIPT
+      </h1>
+      <app-tags [tags]="['Angular', 'Node.JS']"></app-tags>
+      <p class="quotes lato-regular-italic">
+        "Le futur s’écrit une ligne de code à la fois."
+      </p>
+      <div class="buttons lato-bold">
+        <a
+          href="./assets/pdf/CV-quentin-douville.pdf"
+          download
+          class="button lined"
+          >Télécharger mon CV</a
+        >
+        <a class="button filled" routerLink="." fragment="contact"
+          >Travaillons ensemble</a
+        >
+      </div>
+    </section>
   </div>
-</section>
+</div>

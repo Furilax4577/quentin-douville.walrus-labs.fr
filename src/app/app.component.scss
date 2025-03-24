@@ -2,10 +2,10 @@
 
 :host {
   .container {
-    padding-top: 80px;
-    z-index: 1;
-    position: absolute;
-    width: 100%;
+    border: 1px solid red;
+    // z-index: 1;
+    // position: absolute;
+    // width: 100%;
   }
   .background {
     background: linear-gradient(0deg, rgba(52, 174, 254, 0) 0%, #019afe 100%);
@@ -23,6 +23,7 @@
   :host {
     .container {
       overflow-x: hidden;
+      padding: 0 30px;
     }
   }
 }

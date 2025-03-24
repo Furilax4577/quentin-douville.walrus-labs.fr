@@ -1,3 +1,5 @@
+<app-grid *ngIf="isGridVisible"></app-grid>
+
 <div class="background"></div>
 
 <!-- Menus -->
@@ -7,39 +9,53 @@
 
 <div class="container" id="accueil">
   <!-- Intro -->
-  <app-main-line><app-introduction></app-introduction></app-main-line>
+  <app-introduction></app-introduction>
 
   <!-- 1. Qui suis-je -->
-  <app-main-line id="apropos"><app-who-iam></app-who-iam></app-main-line>
+  <app-who-iam id="apropos"></app-who-iam>
 
   <!-- SOFT SKILLS & + -->
-  <app-main-line><app-soft-skills></app-soft-skills></app-main-line>
-  <!-- Centres d'interêts -->
-  <app-main-line><app-interests></app-interests></app-main-line>
+  <app-soft-skills></app-soft-skills>
 
   <!-- 2. Mes compétences -->
-  <app-main-line id="competences"
-    ><app-title title="Mes compétences" [num]="2"></app-title>
-  </app-main-line>
+  <div class="fixed-grid has-12-cols has-6-cols-mobile">
+    <div class="grid is-gap-4 is-row-gap-4">
+      <div
+        class="cell is-col-span-11 is-col-start-2 is-col-span-6-mobile is-col-start-1-mobile"
+      >
+        <app-title
+          title="Mes compétences"
+          id="competences"
+          [num]="2"
+        ></app-title>
+      </div>
+    </div>
+  </div>
 
   <!-- Ils m'on fait confiance -->
-  <app-main-line [hasBackground]="true"
-    ><app-they-trust-me></app-they-trust-me
-  ></app-main-line>
+  <app-they-trust-me></app-they-trust-me>
 
   <!-- 3. Mes expériences -->
-  <app-main-line id="experiences">
-    <app-title title="Mes expériences" [num]="3"></app-title>
-  </app-main-line>
+  <div class="fixed-grid has-12-cols has-6-cols-mobile">
+    <div class="grid is-gap-4 is-row-gap-4">
+      <div
+        class="cell is-col-span-11 is-col-start-2 is-col-span-6-mobile is-col-start-1-mobile"
+      >
+        <app-title
+          title="Mes expériences"
+          id="experiences"
+          [num]="3"
+        ></app-title>
+      </div>
+    </div>
+  </div>
 
   <!-- Un projet à développer ? -->
-  <app-main-line><app-new-project></app-new-project></app-main-line>
+  <app-new-project></app-new-project>
 
   <!-- 4. Ma formation -->
-  <app-main-line id="formation"><app-studies></app-studies></app-main-line>
+  <app-studies id="formation"></app-studies>
 
   <!-- 5. Prenons contact -->
-  <app-main-line id="contact"
-    ><app-stay-in-touch></app-stay-in-touch
-  ></app-main-line>
+  <app-stay-in-touch id="contact"></app-stay-in-touch>
 </div>

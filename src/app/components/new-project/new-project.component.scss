@@ -1,10 +1,11 @@
 @use "../../../styles/variables.scss" as *;
 
 :host {
-  background-color: $lighter-background;
-  padding: 30px;
-  border-radius: 15px;
-
+  section {
+    background-color: $lighter-background;
+    padding: 30px;
+    border-radius: 15px;
+  }
   .title {
     font-size: 28px;
     text-transform: uppercase;
