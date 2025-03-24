@@ -1,5 +1,5 @@
 <div class="header">
-  <a href="/"
+  <a routerLink="." fragment="accueil"
     ><img src="./assets/svg/walrus-labs.svg" alt="Logo de Walrus Labs"
   /></a>
   <img
@@ -17,15 +17,27 @@
     class="burger-toggle burger-close"
     (click)="toggleActive()"
   />
-  <a href="/" class="home-link"
+  <a (click)="close()" routerLink="." fragment="accueil" class="home-link"
     ><img src="./assets/svg/walrus-labs.svg" alt="Logo de Walrus Labs"
   /></a>
   <ul class="pages">
-    <li><a [routerLink]="[]" fragment="#apropos">A propos.</a></li>
-    <li><a [routerLink]="[]" fragment="#competences">Compétences.</a></li>
-    <li><a [routerLink]="[]" fragment="#experiences">Expériences.</a></li>
-    <li><a [routerLink]="[]" fragment="#formation">Formation.</a></li>
-    <li><a [routerLink]="[]" fragment="#contact">Contact.</a></li>
+    <li>
+      <a (click)="close()" routerLink="." fragment="apropos">A propos.</a>
+    </li>
+    <li>
+      <a (click)="close()" routerLink="." fragment="competences"
+        >Compétences.</a
+      >
+    </li>
+    <li>
+      <a (click)="close()" routerLink="." fragment="experiences"
+        >Expériences.</a
+      >
+    </li>
+    <li>
+      <a (click)="close()" routerLink="." fragment="formation">Formation.</a>
+    </li>
+    <li><a (click)="close()" routerLink="." fragment="contact">Contact.</a></li>
   </ul>
   <div class="phone">
     <img src="./assets/svg/telephone.svg" alt="Contacter par téléphone" />

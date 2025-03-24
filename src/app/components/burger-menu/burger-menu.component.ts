@@ -19,4 +19,9 @@ export class BurgerMenuComponent {
       ? './assets/svg/burger-close.svg'
       : './assets/svg/burger-open.svg';
   }
+
+  close() {
+    console.log('close');
+    this.isActive = false;
+  }
 }

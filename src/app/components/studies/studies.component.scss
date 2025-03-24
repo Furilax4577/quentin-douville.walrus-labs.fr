@@ -4,16 +4,21 @@
   .formations {
     display: flex;
     gap: $padding;
+    flex-wrap: wrap;
   }
+
   section {
-    width: 33%;
+    flex: 1;
     border: 1px solid $dark-blue;
+    overflow: hidden;
+    max-width: 500px;
   }
 
   .header {
     display: flex;
     font-size: 24px;
   }
+
   .start-to-end {
     width: 100px;
     height: 100px;
@@ -22,6 +27,7 @@
     align-items: center;
     background-color: $dark-blue;
   }
+
   .header-content {
     display: flex;
     flex: 1;
@@ -30,16 +36,20 @@
     padding-left: $padding;
     text-transform: uppercase;
   }
+
   .sup-title {
     opacity: 0.5;
     font-size: 16px;
   }
+
   .title {
     font-size: 32px;
   }
+
   .content {
     padding: $padding;
   }
+
   .footer {
     padding: 0 $padding $padding $padding;
   }
@@ -51,6 +61,7 @@
       flex-direction: column;
       row-gap: $padding;
     }
+
     section {
       width: 100%;
     }
