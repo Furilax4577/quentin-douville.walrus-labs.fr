@@ -3,8 +3,8 @@
 @use "fonts" as *;
 @use "responsive" as *;
 
-@use "./../../node_modules/bulma/sass/layout/index" as *;
-@use "./../../node_modules/bulma/sass/grid/index" as *;
+@use "./../../node_modules/bulma/sass/layout/container.scss" as *;
+@use "./../../node_modules/bulma/sass/grid/grid.scss" as *;
 @use "./../../node_modules/bulma/sass/helpers/gap.scss" as *;
 
 html {
