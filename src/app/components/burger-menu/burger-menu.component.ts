@@ -1,8 +1,9 @@
 import { Component, HostBinding } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-burger-menu',
-  imports: [],
+  imports: [RouterModule],
   templateUrl: './burger-menu.component.html',
   styleUrl: './burger-menu.component.scss',
 })
