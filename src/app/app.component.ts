@@ -13,6 +13,7 @@ import { RightMenuComponent } from './components/right-menu/right-menu.component
 import { TitleComponent } from './components/title/title.component';
 import { NewProjectComponent } from './components/new-project/new-project.component';
 import { GridComponent } from './components/grid/grid.component';
+import { SkillsComponent } from './components/skills/skills.component';
 
 @Component({
   selector: 'app-root',
@@ -30,6 +31,7 @@ import { GridComponent } from './components/grid/grid.component';
     TitleComponent,
     NewProjectComponent,
     GridComponent,
+    SkillsComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',

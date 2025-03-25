@@ -1,73 +1,18 @@
 import { Component } from '@angular/core';
+import { TitleComponent } from '../title/title.component';
 import { TagsComponent } from '../tags/tags.component';
-import { CommonModule, KeyValuePipe } from '@angular/common';
-
-interface Groups {
-  [key: string]: GroupsGroup[];
-}
-
-interface GroupsGroup {
-  category: string;
-  keywords: string[];
-}
+import { JsonLoaderService } from '../../services/json-loader.service';
 
 @Component({
   selector: 'app-skills',
-  imports: [TagsComponent, KeyValuePipe, CommonModule],
+  imports: [TitleComponent, TagsComponent],
   templateUrl: './skills.component.html',
   styleUrl: './skills.component.scss',
 })
 export class SkillsComponent {
-  groups: Groups = {
-    Frontend: [
-      {
-        category: 'Frameworks',
-        keywords: ['Angular', 'AngularJS', 'Angular Universal'],
-      },
-      {
-        category: 'UI/UX',
-        keywords: [
-          'Angular Material',
-          'Figma',
-          'Bulma',
-          'Bootstrap',
-          'Storybook',
-          'Atomic Design',
-        ],
-      },
-      {
-        category: 'Langages',
-        keywords: [
-          'TypeScript',
-          'JavaScript',
-          'HTML/CSS',
-          'SCSS',
-          'LESS',
-          'SASS',
-        ],
-      },
-      {
-        category: 'Performance & SEO',
-        keywords: ['Lazy loading', 'Webpack', 'GraphQL'],
-      },
-    ],
-    'Backend & API': [{ category: '', keywords: [] }],
-    'DevOps & Outils': [{ category: '', keywords: [] }],
-    'RGPD & Tracking': [{ category: '', keywords: [] }],
-    Autres: [{ category: '', keywords: [] }],
-  };
+  competences!: string[];
 
-  private _selectedGroupKey = 'Frontend';
-
-  isSelected(key: string) {
-    return this._selectedGroupKey === key;
-  }
-
-  selectGroup(key: string) {
-    this._selectedGroupKey = key;
-  }
-
-  selectedGroup(): GroupsGroup[] {
-    return this.groups[this._selectedGroupKey];
+  constructor(private jsonLoaderService: JsonLoaderService) {
+    this.competences = this.jsonLoaderService.getCompetences();
   }
 }

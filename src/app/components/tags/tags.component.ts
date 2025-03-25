@@ -13,4 +13,5 @@ export class TagsComponent {
   @Input() title?: string;
   @Input() bgColor?: string;
   @Input() textColor?: string;
+  @Input() centering?: boolean;
 }

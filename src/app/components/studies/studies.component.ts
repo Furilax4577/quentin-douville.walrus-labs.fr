@@ -14,6 +14,6 @@ import { CommonModule } from '@angular/common';
 export class StudiesComponent {
   studies: Study[];
   constructor(private jsonLoaderService: JsonLoaderService) {
-    this.studies = this.jsonLoaderService.getAll().studies;
+    this.studies = this.jsonLoaderService.getCurriculum().studies;
   }
 }

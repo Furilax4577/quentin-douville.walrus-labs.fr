@@ -1,22 +1,35 @@
 // json-loader.service.ts
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { firstValueFrom } from 'rxjs';
+import { firstValueFrom, tap } from 'rxjs';
 import { Curriculum } from '../interfaces';
 
 @Injectable({ providedIn: 'root' })
 export class JsonLoaderService {
-  private content!: Curriculum;
+  private curriculum!: Curriculum;
+  private competences: string[] = [];
 
   constructor(private http: HttpClient) {}
 
   async load(): Promise<void> {
-    this.content = await firstValueFrom(
-      this.http.get<Curriculum>('/data.json')
+    this.curriculum = await firstValueFrom(
+      this.http.get<Curriculum>('/data.json').pipe(
+        tap((curriculum) => {
+          curriculum.experiences.forEach((experience) => {
+            this.competences = [
+              ...new Set([...this.competences, ...experience.competences]),
+            ];
+          });
+        })
+      )
     );
   }
 
-  getAll(): Curriculum {
-    return this.content;
+  getCurriculum(): Curriculum {
+    return this.curriculum;
+  }
+
+  getCompetences(): string[] {
+    return this.competences;
   }
 }

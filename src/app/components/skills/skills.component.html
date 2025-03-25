@@ -1,21 +1,23 @@
-<div class="list lato-black">
-  <ul>
-    <li
-      *ngFor="let group of groups | keyvalue"
-      [class.is-selected]="isSelected(group.key)"
-      (click)="selectGroup(group.key)"
-    >
-      {{ group.key }}
-    </li>
-  </ul>
-</div>
-<div class="groups">
-  <div class="group" *ngFor="let group of selectedGroup()">
-    <h5 class="lato-black">{{ group.category }}</h5>
-    <app-tags
-      [tags]="group.keywords"
-      bgColor="#182346"
-      textColor="white"
-    ></app-tags>
+<div class="container">
+  <div class="fixed-grid has-12-cols has-6-cols-mobile">
+    <div class="grid is-gap-4 is-row-gap-4">
+      <div
+        class="cell is-col-span-11 is-col-start-2 is-col-span-6-mobile is-col-start-1-mobile"
+      >
+        <app-title
+          title="Mes compétences"
+          id="competences"
+          [num]="2"
+        ></app-title>
+      </div>
+      <div class="cell is-col-span-12 is-col-start-1 is-col-span-6-mobile">
+        <app-tags
+          bgColor="#182346"
+          textColor="white"
+          [tags]="competences"
+          [centering]="true"
+        ></app-tags>
+      </div>
+    </div>
   </div>
 </div>
