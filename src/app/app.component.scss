@@ -41,4 +41,14 @@
 }
 
 @media only screen and (max-width: 640px) {
+  :host {
+    .background {
+      .photo {
+        transform: translate(-25%, 60px);
+      }
+      .w {
+        transform: translate(-83%, 80px);
+      }
+    }
+  }
 }
