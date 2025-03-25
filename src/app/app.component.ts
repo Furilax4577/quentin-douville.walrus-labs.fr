@@ -22,7 +22,6 @@ import { GridComponent } from './components/grid/grid.component';
     IntroductionComponent,
     WhoIAmComponent,
     SoftSkillsComponent,
-
     StudiesComponent,
     TheyTrustMeComponent,
     StayInTouchComponent,

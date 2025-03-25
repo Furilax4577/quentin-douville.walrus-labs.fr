@@ -1,23 +1,28 @@
 <app-grid *ngIf="isGridVisible"></app-grid>
 
-<div class="background"></div>
+<div class="background">
+  <div class="gradient"></div>
+  <img class="photo" src="./assets/images/quentin_douville.webp" alt="" />
+  <img class="w" src="./assets/svg/w.svg" alt="" />
+</div>
 
 <!-- Menus -->
 <app-burger-menu></app-burger-menu>
 <app-left-menu></app-left-menu>
 <app-right-menu></app-right-menu>
 
-<div class="container" id="accueil">
-  <!-- Intro -->
-  <app-introduction></app-introduction>
+<!-- <div class="container" id="accueil"> -->
+<!-- Intro -->
+<app-introduction></app-introduction>
 
-  <!-- 1. Qui suis-je -->
-  <app-who-iam id="apropos"></app-who-iam>
+<!-- 1. Qui suis-je -->
+<app-who-iam id="apropos"></app-who-iam>
 
-  <!-- SOFT SKILLS & + -->
-  <app-soft-skills></app-soft-skills>
+<!-- SOFT SKILLS & + -->
+<app-soft-skills></app-soft-skills>
 
-  <!-- 2. Mes compétences -->
+<!-- 2. Mes compétences -->
+<div class="container">
   <div class="fixed-grid has-12-cols has-6-cols-mobile">
     <div class="grid is-gap-4 is-row-gap-4">
       <div
@@ -31,11 +36,13 @@
       </div>
     </div>
   </div>
+</div>
 
-  <!-- Ils m'on fait confiance -->
-  <app-they-trust-me></app-they-trust-me>
+<!-- Ils m'on fait confiance -->
+<app-they-trust-me></app-they-trust-me>
 
-  <!-- 3. Mes expériences -->
+<!-- 3. Mes expériences -->
+<div class="container">
   <div class="fixed-grid has-12-cols has-6-cols-mobile">
     <div class="grid is-gap-4 is-row-gap-4">
       <div
@@ -49,13 +56,14 @@
       </div>
     </div>
   </div>
-
-  <!-- Un projet à développer ? -->
-  <app-new-project></app-new-project>
-
-  <!-- 4. Ma formation -->
-  <app-studies id="formation"></app-studies>
-
-  <!-- 5. Prenons contact -->
-  <app-stay-in-touch id="contact"></app-stay-in-touch>
 </div>
+
+<!-- Un projet à développer ? -->
+<app-new-project></app-new-project>
+
+<!-- 4. Ma formation -->
+<app-studies id="formation"></app-studies>
+
+<!-- 5. Prenons contact -->
+<app-stay-in-touch id="contact"></app-stay-in-touch>
+<!-- </div> -->

@@ -1,10 +1,10 @@
 export interface Curriculum {
   introduction: string;
   experiences: Experience[];
+  studies: Study[];
 }
 
 export interface Experience {
-  id?: number;
   entreprise: string;
   poste: string;
   lieu: string;
@@ -12,5 +12,14 @@ export interface Experience {
   dateDebut: Date;
   dateFin?: Date;
   description: string;
+  competences: string[];
+}
+
+export interface Study {
+  startYear: number;
+  endYear: number;
+  shortTitle: string;
+  title: string;
+  location: string;
   competences: string[];
 }

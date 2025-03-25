@@ -2,11 +2,12 @@
 
 :host {
   display: block;
-  // padding: 100px 0;
-  // margin: 100px 0;
+  background-color: $lighter-background;
+  padding: 100px 0;
+  margin: 100px 0;
   .trust {
     padding: 150px 0;
-    background-color: $lighter-background;
+
     .grid {
       gap: 40px;
     }

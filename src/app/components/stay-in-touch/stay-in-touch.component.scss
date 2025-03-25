@@ -1,6 +1,8 @@
 @use "../../../styles/variables.scss" as *;
 
 :host {
+  display: block;
+  padding-bottom: 80px;
   .stay-in-touch {
     background-color: $dark-blue;
     display: flex;

@@ -43,15 +43,15 @@
   }
 
   .title {
-    font-size: 32px;
+    font-size: 28px;
   }
 
   .content {
-    padding: $padding;
+    padding: $padding $padding 15px $padding;
   }
 
   .footer {
-    padding: 0 $padding $padding $padding;
+    padding: 0 $padding;
   }
 }
 

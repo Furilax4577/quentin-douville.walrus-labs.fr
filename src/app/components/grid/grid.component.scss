@@ -12,7 +12,10 @@
     height: 2000px;
     background: rgba($color: red, $alpha: 0.07);
     &:nth-child(odd) {
-      background: rgba($color: red, $alpha: 0.05);
+      background: rgba($color: green, $alpha: 0.05);
+    }
+    &:nth-child(8) {
+      background: rgba($color: blue, $alpha: 0.05);
     }
   }
 }

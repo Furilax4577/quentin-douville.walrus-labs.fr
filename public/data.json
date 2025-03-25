@@ -1,5 +1,6 @@
 {
-  "introduction": "Ingénieur en développement polyvalent, j'ai forgé mon expertise à travers des projets d'envergure pour des entreprises variées, où j'ai démontré ma capacité à mener des projets dans des environnements complexes et exigeants. Avec un sens aigu de la performance, de la résilience et de la qualité, je suis motivé par des missions où la personnalisation, la sécurité et la modularité sont essentielles. Ma capacité d'adaptation et mon souci du détail m'ont permis de contribuer efficacement, en respectant des contraintes strictes et en répondant aux objectifs de croissance et d'innovation de mes clients.",
+  "introduction": "Développeur Fullstack JavaScript senior, spécialisé en Angular, Node.js et microservices, avec une forte expertise en performance, scalabilité et UX. J'ai dirigé des projets critiques dans des environnements exigeants, optimisant les architectures pour garantir résilience et efficacité. Mon approche repose sur l'automatisation, l'optimisation et l'innovation technologique.",
+  "citation": "Le futur s'écrit une ligne de code à la fois.",
   "experiences": [
     {
       "entreprise": "Saint Gobain",
@@ -8,7 +9,7 @@
       "lieu": "Paris",
       "dateDebut": "2023-01-01",
       "dateFin": "2024-10-01",
-      "description": "Chargé de développer la V2 d'un intranet internationnal, j’ai contribué à finaliser un projet essentiel pour Saint-Gobain, facilitant la création des cahiers des charges pour les pièces produites par ses équipes à travers le monde. Dans un environnement utilisant Angular, Angular Material, TypeScript, Sass et Figma, j’ai apporté mon expertise en surchage de composants Angular Material, permettant un haut niveau de personnalisation visuelle et fonctionnelle. Mon implication dans le projet, déjà en cours, a permis de respecter les délais et de fournir une solution ergonomique et adaptée aux besoins internationaux de l'entreprise.",
+      "description": "Chargé de développer la V2 d'un intranet internationnal, j'ai contribué à finaliser un projet essentiel pour Saint-Gobain, facilitant la création des cahiers des charges pour les pièces produites par ses équipes à travers le monde. Dans un environnement utilisant Angular, Angular Material, TypeScript, Sass et Figma, j'ai apporté mon expertise en surchage de composants Angular Material, permettant un haut niveau de personnalisation visuelle et fonctionnelle. Mon implication dans le projet, déjà en cours, a permis de respecter les délais et de fournir une solution ergonomique et adaptée aux besoins internationaux de l'entreprise.",
       "competences": [
         "HTML/CSS",
         "Angular",
@@ -146,7 +147,7 @@
       "lieu": "Paris",
       "dateDebut": "2017-07-01",
       "dateFin": "2017-12-01",
-      "description": "Administration et développement frontend pour un site e-commerce multilingue sous un CMS maison en .NET, dédié à la vente de chaussures et d’accessoires. Utilisant HTML/CSS et JavaScript, j'ai intégré des outils d'analyse et d'optimisation, notamment Google Analytics, Google Tag Manager, et Google Optimize pour des campagnes d’A/B testing. J'ai également mis en place des notifications push via WonderPush, contribuant ainsi à améliorer l'engagement utilisateur et les performances marketing.",
+      "description": "Administration et développement frontend pour un site e-commerce multilingue sous un CMS maison en .NET, dédié à la vente de chaussures et d'accessoires. Utilisant HTML/CSS et JavaScript, j'ai intégré des outils d'analyse et d'optimisation, notamment Google Analytics, Google Tag Manager, et Google Optimize pour des campagnes d'A/B testing. J'ai également mis en place des notifications push via WonderPush, contribuant ainsi à améliorer l'engagement utilisateur et les performances marketing.",
       "competences": [
         "Javascript",
         ".NET",
@@ -192,6 +193,47 @@
         "Wordpress",
         "XML",
         "MariaDB"
+      ]
+    }
+  ],
+  "studies": [
+    {
+      "startYear": 2010,
+      "endYear": 2013,
+      "shortTitle": "DUT SRC",
+      "title": "DUT Services & réseaux de communication",
+      "location": "Montbéliard",
+      "school ": "Université de technologie de Belfort-Montbéliard",
+      "competences": [
+        "Développement Web",
+        "SEO",
+        "Communication",
+        "Webdesign",
+        "UX/UI"
+      ]
+    },
+    {
+      "startYear": 2008,
+      "endYear": 2010,
+      "shortTitle": "BAC PRO MRIM",
+      "title": "BAC Professionnel micro-informatique, réseaux, installation & maintenance",
+      "location": "Belfort",
+      "school ": "Lycée Denis Diderot",
+      "competences": ["Réseaux", "Informatique", "Linux", "Windows", "Hardware"]
+    },
+    {
+      "startYear": 2006,
+      "endYear": 2008,
+      "shortTitle": "BEP électronique",
+      "title": "BEP Métiers de l'électronique",
+      "location": "Belfort",
+      "school ": "Lycée Denis Diderot",
+      "competences": [
+        "Électronique",
+        "Programmation",
+        "Conception",
+        "Diagnostic",
+        "Mesures"
       ]
     }
   ]

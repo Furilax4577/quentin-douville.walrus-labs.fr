@@ -1,81 +1,39 @@
-<div class="fixed-grid has-12-cols has-6-cols-mobile">
-  <div class="grid is-gap-4 is-row-gap-4">
-    <div
-      class="cell is-col-span-11 is-col-start-2 is-col-span-6-mobile is-col-start-1-mobile"
-    >
-      <app-title title="Ma formation" [num]="4"></app-title>
-    </div>
-    <div class="cell is-col-span-4 is-col-span-6-mobile">
-      <section>
-        <div class="header lato-black">
-          <div class="start-to-end">2010<br />2013</div>
-          <div class="header-content">
-            <p class="sup-title">Montbéliard</p>
-            <p class="title">DUT SRC</p>
+<div class="container">
+  <div class="fixed-grid has-12-cols has-6-cols-mobile">
+    <div class="grid is-gap-4 is-row-gap-4">
+      <div
+        class="cell is-col-span-11 is-col-start-2 is-col-span-6-mobile is-col-start-1-mobile"
+      >
+        <app-title title="Ma formation" [num]="4"></app-title>
+      </div>
+      <div
+        class="cell is-col-span-4 is-col-span-6-mobile"
+        *ngFor="let study of studies"
+      >
+        <section>
+          <div class="header lato-black">
+            <div class="start-to-end">
+              {{ study.startYear }}<br />{{ study.endYear }}
+            </div>
+            <div class="header-content">
+              <p class="sup-title">{{ study.location }}</p>
+              <p class="title">{{ study.shortTitle }}</p>
+            </div>
           </div>
-        </div>
-        <div class="content">
-          <p>
-            Université de technologie de Belfort-Montbéliard Services & Réseaux
-            de Communication
-          </p>
-        </div>
-        <div class="footer">
-          <app-tags
-            bgColor="#182346"
-            textColor="white"
-            [tags]="['aze', 'aze', 'aze', 'aze', 'aze']"
-          ></app-tags>
-        </div>
-      </section>
-    </div>
-    <div class="cell is-col-span-4 is-col-span-6-mobile">
-      <section>
-        <div class="header lato-black">
-          <div class="start-to-end">2010<br />2013</div>
-          <div class="header-content">
-            <p class="sup-title">Montbéliard</p>
-            <p class="title">DUT SRC</p>
+          <div class="content">
+            <p>
+              {{ study.title }}
+            </p>
           </div>
-        </div>
-        <div class="content">
-          <p>
-            Université de technologie de Belfort-Montbéliard Services & Réseaux
-            de Communication
-          </p>
-        </div>
-        <div class="footer">
-          <app-tags
-            bgColor="#182346"
-            textColor="white"
-            [tags]="['aze', 'aze', 'aze', 'aze', 'aze']"
-          ></app-tags>
-        </div>
-      </section>
-    </div>
-    <div class="cell is-col-span-4 is-col-span-6-mobile">
-      <section>
-        <div class="header lato-black">
-          <div class="start-to-end">2010<br />2013</div>
-          <div class="header-content">
-            <p class="sup-title">Montbéliard</p>
-            <p class="title">DUT SRC</p>
+          <div class="footer">
+            <app-tags
+              bgColor="#182346"
+              textColor="white"
+              [tags]="study.competences"
+            ></app-tags>
           </div>
-        </div>
-        <div class="content">
-          <p>
-            Université de technologie de Belfort-Montbéliard Services & Réseaux
-            de Communication
-          </p>
-        </div>
-        <div class="footer">
-          <app-tags
-            bgColor="#182346"
-            textColor="white"
-            [tags]="['aze', 'aze', 'aze', 'aze', 'aze']"
-          ></app-tags>
-        </div>
-      </section>
+        </section>
+      </div>
     </div>
   </div>
 </div>
