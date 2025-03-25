@@ -7,6 +7,7 @@ import { routes } from './app.routes';
   imports: [
     RouterModule.forRoot(routes, {
       anchorScrolling: 'enabled',
+      scrollPositionRestoration: 'enabled',
       scrollOffset: [0, 0],
     }),
   ],

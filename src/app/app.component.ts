@@ -14,6 +14,7 @@ import { TitleComponent } from './components/title/title.component';
 import { NewProjectComponent } from './components/new-project/new-project.component';
 import { GridComponent } from './components/grid/grid.component';
 import { SkillsComponent } from './components/skills/skills.component';
+import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-root',
@@ -39,7 +40,18 @@ import { SkillsComponent } from './components/skills/skills.component';
 export class AppComponent {
   isGridVisible = false;
 
-  constructor() {}
+  constructor(private meta: Meta, private title: Title) {
+    this.title.setTitle('DÉVELOPPEUR / LEAD TECH FULL STACK JAVASCRIPT');
+    this.meta.updateTag({
+      name: 'description',
+      content:
+        "Développeur Fullstack JavaScript senior, spécialisé en Angular, Node.js et microservices, avec une forte expertise en performance, scalabilité et UX. J'ai dirigé des projets critiques dans des environnements exigeants, optimisant les architectures pour garantir résilience et efficacité. Mon approche repose sur l'automatisation, l'optimisation et l'innovation technologique.",
+    });
+    this.meta.updateTag({
+      name: 'keywords',
+      content: 'Développeur, Angular, NodeJS, Fullstack, Frontend, Backend',
+    });
+  }
 
   @HostListener('window:keydown', ['$event'])
   handleKeyboardEvent(event: KeyboardEvent) {
