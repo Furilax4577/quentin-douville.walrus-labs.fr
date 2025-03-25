@@ -16,11 +16,16 @@
         <div class="buttons lato-bold">
           <a
             href="./assets/pdf/CV-quentin-douville.pdf"
+            (click)="trackEvent('introduction', 'curriculum')"
             download
             class="button lined"
             >Télécharger mon CV</a
           >
-          <a class="button filled" routerLink="." fragment="contact"
+          <a
+            class="button filled"
+            routerLink="."
+            fragment="contact"
+            (click)="trackEvent('introduction', 'travaillons_ensemble')"
             >Travaillons ensemble</a
           >
         </div>

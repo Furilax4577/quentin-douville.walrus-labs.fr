@@ -12,9 +12,16 @@
             class="button lined"
             href="./assets/pdf/CV-quentin-douville.pdf"
             download
+            (click)="trackEvent('un_nouveau_projet', 'curriculum')"
             >Télécharger mon CV</a
           >
-          <a class="button filled">Travaillons ensemble</a>
+          <a
+            class="button filled"
+            routerLink="."
+            fragment="contact"
+            (click)="trackEvent('un_nouveau_projet', 'travaillons_ensemble')"
+            >Travaillons ensemble</a
+          >
         </div>
       </section>
     </div>

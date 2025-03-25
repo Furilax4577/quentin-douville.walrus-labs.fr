@@ -1,5 +1,6 @@
 import { Component, HostBinding } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { AnalyticsService } from '../../services/analytics.service';
 
 @Component({
   selector: 'app-burger-menu',
@@ -10,7 +11,10 @@ import { RouterModule } from '@angular/router';
 export class BurgerMenuComponent {
   @HostBinding('class.active') isActive = false;
 
-  toggleActive() {
+  constructor(private analyticsService: AnalyticsService) {}
+
+  toggleActive(category: string) {
+    this.trackEvent(category, 'toggle_burger_menu');
     this.isActive = !this.isActive;
   }
 
@@ -21,7 +25,11 @@ export class BurgerMenuComponent {
   }
 
   close() {
-    console.log('close');
     this.isActive = false;
+  }
+
+  trackEvent(category: string, label: string) {
+    this.analyticsService.trackEvent('click', category, label);
+    this.close();
   }
 }

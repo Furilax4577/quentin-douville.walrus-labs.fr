@@ -28,7 +28,13 @@
         <app-enterprise imageAlt="" imageName="nanotera"></app-enterprise>
       </div>
       <div class="cell is-col-span-2 is-col-span-3-mobile">
-        <a routerLink="." fragment="contact" class="work-together lato-black"
+        <a
+          routerLink="."
+          fragment="contact"
+          class="work-together lato-black"
+          (click)="
+            trackEvent('ils_m_ont_fait_confiance', 'travaillons_ensemble')
+          "
           >Travaillons<br />ensemble</a
         >
       </div>

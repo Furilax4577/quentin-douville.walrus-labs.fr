@@ -27,6 +27,10 @@
   </ul>
 </section>
 
-<a routerLink="." fragment="accueil" class="scroll-top"
+<a
+  routerLink="."
+  fragment="accueil"
+  class="scroll-top"
+  (click)="trackEvent('right_menu', 'scroll_top')"
   ><img src="./assets/svg/bouton_fleche_haut.svg" alt="" />
 </a>

@@ -1,13 +1,51 @@
 <nav>
-  <a routerLink="." fragment="accueil"
+  <a
+    routerLink="."
+    fragment="accueil"
+    (click)="trackEvent('left_menu', 'accueil')"
     ><img src="./assets/svg/walrus-labs.svg" alt="Logo de Walrus Labs"
   /></a>
   <ul>
-    <li><a routerLink="." fragment="apropos">A propos.</a></li>
-    <li><a routerLink="." fragment="competences">Compétences.</a></li>
-    <li><a routerLink="." fragment="experiences">Expériences.</a></li>
-    <li><a routerLink="." fragment="formation">Formation.</a></li>
-    <li><a routerLink="." fragment="contact">Contact.</a></li>
+    <li>
+      <a
+        routerLink="."
+        fragment="apropos"
+        (click)="trackEvent('left_menu', 'apropos')"
+        >A propos.</a
+      >
+    </li>
+    <li>
+      <a
+        routerLink="."
+        fragment="competences"
+        (click)="trackEvent('left_menu', 'competences')"
+        >Compétences.</a
+      >
+    </li>
+    <li>
+      <a
+        routerLink="."
+        fragment="experiences"
+        (click)="trackEvent('left_menu', 'experiences')"
+        >Expériences.</a
+      >
+    </li>
+    <li>
+      <a
+        routerLink="."
+        fragment="formation"
+        (click)="trackEvent('left_menu', 'formation')"
+        >Formation.</a
+      >
+    </li>
+    <li>
+      <a
+        routerLink="."
+        fragment="contact"
+        (click)="trackEvent('left_menu', 'contact')"
+        >Contact.</a
+      >
+    </li>
   </ul>
 </nav>
 

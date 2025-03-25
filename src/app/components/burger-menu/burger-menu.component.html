@@ -1,12 +1,15 @@
 <div class="header">
-  <a routerLink="." fragment="accueil"
+  <a
+    routerLink="."
+    fragment="accueil"
+    (click)="trackEvent('mobile_header', 'accueil')"
     ><img src="./assets/svg/walrus-labs.svg" alt="Logo de Walrus Labs"
   /></a>
   <img
     [src]="getImagePath()"
     alt="Contacter par téléphone"
     class="burger-toggle burger-open"
-    (click)="toggleActive()"
+    (click)="toggleActive('mobile_header')"
   />
 </div>
 
@@ -15,52 +18,93 @@
     [src]="getImagePath()"
     alt="Contacter par téléphone"
     class="burger-toggle burger-close"
-    (click)="toggleActive()"
+    (click)="toggleActive('burger_menu')"
   />
-  <a (click)="close()" routerLink="." fragment="accueil" class="home-link"
+  <a
+    (click)="trackEvent('burger_menu', 'accueil')"
+    routerLink="."
+    fragment="accueil"
+    class="home-link"
     ><img src="./assets/svg/walrus-labs.svg" alt="Logo de Walrus Labs"
   /></a>
   <ul class="pages">
     <li>
-      <a (click)="close()" routerLink="." fragment="apropos">A propos.</a>
+      <a
+        (click)="trackEvent('burger_menu', 'apropos')"
+        routerLink="."
+        fragment="apropos"
+        >A propos.</a
+      >
     </li>
     <li>
-      <a (click)="close()" routerLink="." fragment="competences"
+      <a
+        (click)="trackEvent('burger_menu', 'competences')"
+        routerLink="."
+        fragment="competences"
         >Compétences.</a
       >
     </li>
     <li>
-      <a (click)="close()" routerLink="." fragment="experiences"
+      <a
+        (click)="trackEvent('burger_menu', 'experiences')"
+        routerLink="."
+        fragment="experiences"
         >Expériences.</a
       >
     </li>
     <li>
-      <a (click)="close()" routerLink="." fragment="formation">Formation.</a>
+      <a
+        (click)="trackEvent('burger_menu', 'formation')"
+        routerLink="."
+        fragment="formation"
+        >Formation.</a
+      >
     </li>
-    <li><a (click)="close()" routerLink="." fragment="contact">Contact.</a></li>
+    <li>
+      <a
+        (click)="trackEvent('burger_menu', 'contact')"
+        routerLink="."
+        fragment="contact"
+        >Contact.</a
+      >
+    </li>
   </ul>
   <div class="phone">
     <img src="./assets/svg/telephone.svg" alt="Contacter par téléphone" />
-    <a href="tel:+33669517395">06 69 51 73 95</a>
+    <a href="tel:+33669517395" (click)="trackEvent('burger_menu', 'tel')"
+      >06 69 51 73 95</a
+    >
   </div>
   <ul class="links">
     <li>
-      <a href="mailto:douville.quentin@walrus-labs.fr" target="_blank"
+      <a
+        href="mailto:douville.quentin@walrus-labs.fr"
+        target="_blank"
+        (click)="trackEvent('burger_menu', 'mailto')"
         ><img src="./assets/svg/mail.svg" alt="Contacter par email"
       /></a>
     </li>
     <li>
-      <a href="https://gitlab.com/douville.quentin" target="_blank"
+      <a
+        href="https://gitlab.com/douville.quentin"
+        target="_blank"
+        (click)="trackEvent('burger_menu', 'gitlab')"
         ><img src="./assets/svg/gitlab.svg" alt="Voir mon gitlab"
       /></a>
     </li>
     <li>
-      <a href="https://www.linkedin.com/in/quentin-douville/" target="_blank"
+      <a
+        href="https://www.linkedin.com/in/quentin-douville/"
+        target="_blank"
+        (click)="trackEvent('burger_menu', 'linkedIn')"
         ><img src="./assets/svg/linkedin.svg" alt="Voir mon profil linkedIn"
       /></a>
     </li>
     <li>
-      <a href="https://github.com/Furilax4577" target="_blank"
+      <a
+        href="https://github.com/Furilax4577"
+        target="_blank"
+        (click)="trackEvent('burger_menu', 'github')"
         ><img src="./assets/svg/github.svg" alt="Voir mon github"
       /></a>
     </li>
