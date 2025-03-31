@@ -1,7 +1,5 @@
 <p>{{ curriculum?.introduction }}</p>
 
-<!-- <app-competence-tag-list [competences]="competences"></app-competence-tag-list> -->
-
 <div class="missions">
   <ng-container *ngFor="let experience of curriculum?.experiences">
     <app-experience-details [experience]="experience"></app-experience-details>

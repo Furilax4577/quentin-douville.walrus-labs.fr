@@ -1,13 +1,15 @@
 {
-  "name": "douville.quentin.dev",
+  "name": "angular-project",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "postbuild": "npm run generate:sitemap",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:douville.quentin.dev": "node dist/douville.quentin.dev/server/server.mjs"
+    "serve:ssr:angular-project": "node dist/angular-project/server/server.mjs",
+    "generate:sitemap": "ts-node -P tsconfig.scripts.json scripts/generate-sitemap.ts"
   },
   "private": true,
   "dependencies": {
@@ -41,6 +43,9 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
-    "typescript": "~5.7.2"
+    "typescript": "~5.7.2",
+    "date-fns": "^4.1.0",
+    "fast-xml-parser": "^5.0.9",
+    "ts-node": "^10.9.2"
   }
 }

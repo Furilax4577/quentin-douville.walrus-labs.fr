@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://quentin-douville.walrus-labs.fr/sitemap.xml

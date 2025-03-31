@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "douville.quentin.dev": {
+    "angular-project": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/douville.quentin.dev",
+            "outputPath": "dist/angular-project",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": ["zone.js"],
@@ -30,6 +30,9 @@
               }
             ],
             "styles": ["src/styles/styles.scss"],
+            "stylePreprocessorOptions": {
+              "includePaths": ["src/styles"]
+            },
             "scripts": [],
             "server": "src/main.server.ts",
             "prerender": true,
@@ -65,10 +68,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "douville.quentin.dev:build:production"
+              "buildTarget": "angular-project:build:production"
             },
             "development": {
-              "buildTarget": "douville.quentin.dev:build:development"
+              "buildTarget": "angular-project:build:development"
             }
           },
           "defaultConfiguration": "development"

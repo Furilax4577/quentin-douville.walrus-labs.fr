@@ -2,10 +2,7 @@
 @use "variables" as *;
 @use "fonts" as *;
 @use "responsive" as *;
-
-@use "./../../node_modules/bulma/sass/layout/container.scss" as *;
-@use "./../../node_modules/bulma/sass/grid/grid.scss" as *;
-@use "./../../node_modules/bulma/sass/helpers/gap.scss" as *;
+@use "bulma" as *;
 
 html {
   background-color: $background;

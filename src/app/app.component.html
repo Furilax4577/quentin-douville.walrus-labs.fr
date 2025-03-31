@@ -1,54 +1,8 @@
 <app-grid *ngIf="isGridVisible"></app-grid>
 
-<div class="background">
-  <div class="gradient"></div>
-  <img class="photo" src="./assets/images/quentin_douville.webp" alt="" />
-  <img class="w" src="./assets/svg/w.svg" alt="" />
-</div>
-
 <!-- Menus -->
 <app-burger-menu></app-burger-menu>
 <app-left-menu></app-left-menu>
 <app-right-menu></app-right-menu>
 
-<!-- Intro -->
-<app-introduction id="accueil"></app-introduction>
-
-<!-- 1. Qui suis-je -->
-<app-who-iam id="apropos"></app-who-iam>
-
-<!-- SOFT SKILLS & + -->
-<app-soft-skills></app-soft-skills>
-
-<!-- 2. Mes compétences -->
-<app-skills></app-skills>
-
-<!-- Ils m'on fait confiance -->
-<app-they-trust-me></app-they-trust-me>
-
-<!-- 3. Mes expériences -->
-<div class="container">
-  <div class="fixed-grid has-12-cols has-6-cols-mobile">
-    <div class="grid is-gap-4 is-row-gap-4">
-      <div
-        class="cell is-col-span-11 is-col-start-2 is-col-span-6-mobile is-col-start-1-mobile"
-      >
-        <app-title
-          title="Mes expériences"
-          id="experiences"
-          [num]="3"
-        ></app-title>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Un projet à développer ? -->
-<app-new-project></app-new-project>
-
-<!-- 4. Ma formation -->
-<app-studies id="formation"></app-studies>
-
-<!-- 5. Prenons contact -->
-<app-stay-in-touch id="contact"></app-stay-in-touch>
-<!-- </div> -->
+<router-outlet />

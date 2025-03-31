@@ -1,10 +1,9 @@
 import { Component, input } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MatRippleModule } from '@angular/material/core';
 
 @Component({
   selector: 'app-competence-tag-list',
-  imports: [CommonModule, MatRippleModule],
+  imports: [CommonModule],
   templateUrl: './competence-tag-list.component.html',
   styleUrl: './competence-tag-list.component.scss',
 })
