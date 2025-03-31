@@ -26,17 +26,10 @@ jobs:
         with:
           node-version: 22
 
-      - name: 📦 Installer les dépendances
-        run: npm ci
-
-      - name: 🚀 Build du projet Angular
-        run: npm run build -- --configuration=production
-
       - name: 🐳 Build et tag de l'image Docker
         run: |
           docker build \
             --build-arg BASE_URL=$BASE_URL \
-            --build-arg APP_NAME=$APP_NAME \
             -t quentin-douville.walrus-labs.fr .
 
       - name: 🔑 Ajouter la clé SSH du serveur

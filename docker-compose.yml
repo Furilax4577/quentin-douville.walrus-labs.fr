@@ -1,10 +1,3 @@
-# services:
-#   angular-app:
-#     build: .
-#     ports:
-#       - "8081:8081" # Expose le port 8081
-#     restart: unless-stopped
-
 services:
   angular-app:
     build: .
