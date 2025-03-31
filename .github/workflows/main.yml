@@ -34,7 +34,7 @@ jobs:
 
       - name: 🐳 Build et tag de l'image Docker
         run: |
-          docker build -t quentin-douville.walrus-labs.fr .
+          docker build -t --build-arg BASE_URL=$BASE_URL quentin-douville.walrus-labs.fr .
 
       - name: 🔑 Ajouter la clé SSH du serveur
         run: |
