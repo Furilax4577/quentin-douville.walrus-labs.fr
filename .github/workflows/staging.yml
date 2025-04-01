@@ -1,0 +1,66 @@
+name: Deploy de "angular-project" en staging
+
+on:
+  push:
+    branches:
+      - staging
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    env:
+      VPS_IP: ${{ secrets.VPS_IP }}
+      VPS_USER: ${{ secrets.VPS_USER }}
+      VPS_SSH_KEY: ${{ secrets.VPS_SSH_KEY }}
+      DNS: quentin-douville.walrus-labs.fr
+      EXPOSED_PORT: 8001
+
+    steps:
+      - name: Construire BASE_URL et VPS_DEPLOY_PATH
+        run: |
+          echo "BASE_URL=https://staging.$DNS" >> $GITHUB_ENV
+          echo "VPS_DEPLOY_PATH=~/www/${DNS}_staging" >> $GITHUB_ENV
+
+      - name: Afficher la valeur de variables
+        run: |
+          echo "DNS = $DNS"
+          echo "BASE_URL = $BASE_URL"
+          echo "VPS_DEPLOY_PATH = $VPS_DEPLOY_PATH"
+
+      - name: 📥 Cloner le dépôt
+        uses: actions/checkout@v3
+
+      - name: 🔧 Installer Node.js et npm
+        uses: actions/setup-node@v3
+        with:
+          node-version: 22
+
+      - name: 🐳 Build et tag de l'image Docker
+        run: |
+          docker build \
+            --build-arg BASE_URL=$BASE_URL \
+            -t ${DNS}_staging .
+
+      - name: 🔑 Ajouter la clé SSH du serveur
+        run: |
+          mkdir -p ~/.ssh
+          echo "$VPS_SSH_KEY" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+          ssh-keyscan -t ed25519 $VPS_IP >> ~/.ssh/known_hosts
+
+      - name: 📂 Créer le répertoire cible sur le serveur
+        run: ssh -i ~/.ssh/id_ed25519 $VPS_USER@$VPS_IP "mkdir -p $VPS_DEPLOY_PATH && chmod 755 $VPS_DEPLOY_PATH"
+
+      - name: 🚀 Déploiement rapide avec `rsync`
+        run: |
+          rsync -azP --delete --exclude=node_modules -e "ssh -i ~/.ssh/id_ed25519" ./ $VPS_USER@$VPS_IP:$VPS_DEPLOY_PATH
+
+      - name: 🐳 Déployer le conteneur via Docker Compose
+        run: |
+          ssh -i ~/.ssh/id_ed25519 $VPS_USER@$VPS_IP << EOF
+          cd $VPS_DEPLOY_PATH
+          export BASE_URL="${BASE_URL}"
+          export EXPOSED_PORT="${EXPOSED_PORT}"
+          docker compose up -d --build
+          EOF
