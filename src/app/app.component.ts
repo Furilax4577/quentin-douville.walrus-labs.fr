@@ -2,11 +2,13 @@ import { Component, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { isDevMode } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
-import { RouterModule } from '@angular/router';
+import { NavigationEnd, Router, RouterModule } from '@angular/router';
 import { GridComponent } from './components/grid/grid.component';
 import { BurgerMenuComponent } from './components/burger-menu/burger-menu.component';
 import { LeftMenuComponent } from './components/left-menu/left-menu.component';
 import { RightMenuComponent } from './components/right-menu/right-menu.component';
+import { AnalyticsService } from './services/analytics.service';
+import { filter } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -24,7 +26,12 @@ import { RightMenuComponent } from './components/right-menu/right-menu.component
 export class AppComponent {
   isGridVisible = false;
 
-  constructor(private meta: Meta, private title: Title) {
+  constructor(
+    private meta: Meta,
+    private title: Title,
+    private analytics: AnalyticsService,
+    private router: Router
+  ) {
     this.title.setTitle('DÉVELOPPEUR / LEAD TECH FULL STACK JAVASCRIPT');
     this.meta.updateTag({
       name: 'description',
@@ -35,6 +42,16 @@ export class AppComponent {
       name: 'keywords',
       content: 'Développeur, Angular, NodeJS, Fullstack, Frontend, Backend',
     });
+  }
+
+  ngOnInit() {
+    this.analytics.init();
+
+    this.router.events
+      .pipe(filter((event) => event instanceof NavigationEnd))
+      .subscribe((event: NavigationEnd) => {
+        this.analytics.sendPageView(event.urlAfterRedirects);
+      });
   }
 
   @HostListener('window:keydown', ['$event'])
